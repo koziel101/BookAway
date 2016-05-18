@@ -20,7 +20,7 @@ Instalação
 Autores
 -------
  * Hiago Augusto Koziel Rahmig - <hiagokoziel100@gmail.com>
- * Leonardo Costa dos Santos - <leonardo.kalyn.gmail.com>
+ * Leonardo Costa dos Santos - <leonardo.kalyn@gmail.com>
  * Marjorie Celestino - <margecelestino@gmail.com>
  * Matheus Cardoso Duarte Santos - <mtesedd@gmail.com>
 
