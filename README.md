@@ -38,13 +38,12 @@ Para trabalhar no projeto localmente, vá para uma pasta que deseja colocar o pr
 
 **Obs.:** Caso o repositório remoto tenha sido atualizado após o último *push*, o seu repositório local está desatualizado. Para atualizar digite `git pull` e os arquivos serão todos atualizados com o repositório remoto.
 
-Mais informações no [Plano de Gerência de Configuração](../../wiki/Plano de Gerência de Configuração).
 
 Bug tracker
 -----------
 Encontrou um bug? Quer sugerir um novo recurso ou melhoria? Informe-nos aqui no GitHub!
 
-[Issues - gabrielaimeeg/DroidMetronome](https://github.com/koziel101/BookAway/issues)
+[Issues - koziel101/BookAway](https://github.com/koziel101/BookAway/issues)
 
 Pull Request
 ------------
