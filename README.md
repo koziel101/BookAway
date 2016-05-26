@@ -2,7 +2,8 @@
 
 Projeto de Software apresentado como trabalho da disciplia "DESENVOLVIMENTO DE SOFTWARE PARA A WEB" do 7º período do semestre 2016/1 do curso de Engenharia de Software da Universidade Federal de Goiás.
 
-#### Facilitador
+#### Facilitadores
+Prof. Marcelo Ricardo Quinta
 Prof. Walison Cavalcanti Moreira
 
 Descrição
