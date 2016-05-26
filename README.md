@@ -7,7 +7,9 @@ Prof. Walison Cavalcanti Moreira
 
 Descrição
 ---------
-**BookAway** é um projeto de sistema WEB que consiste em 
+**BookAway** é um aplicativo android, com o intuito de facilitar a circulação de livros entre leitores. Pelo aplicativo, usuários podem registrar livros que possui e tem interesse em trocar, vender, doar ou emprestar.
+
+A idéia é que os usuários exponham seus livros para que outros usuários possam buscar por eles, e entrar em contato quando houver interesse. A negociação é inteiramente entre os usuários.
 
 Licenciamento
 -------------
