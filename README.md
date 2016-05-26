@@ -4,6 +4,7 @@ Projeto de Software apresentado como trabalho da disciplia "DESENVOLVIMENTO DE S
 
 #### Facilitadores
 Prof. Marcelo Ricardo Quinta
+
 Prof. Walison Cavalcanti Moreira
 
 Descrição
