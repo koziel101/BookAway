@@ -13,14 +13,6 @@ Descrição
 
 A idéia é que os usuários exponham seus livros para que outros usuários possam buscar por eles, e entrar em contato quando houver interesse. A negociação é inteiramente entre os usuários.
 
-Licenciamento
--------------
-*Até o fechamento deste trabalho, todos os direitos reservados.*
-
-Instalação
-----------
-*A implementar.*
-
 Autores
 -------
  * Hiago Augusto Koziel Rahmig - <hiagokoziel100@gmail.com>
