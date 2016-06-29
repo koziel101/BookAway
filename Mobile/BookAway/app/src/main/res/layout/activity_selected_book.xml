@@ -196,8 +196,30 @@
                 android:textColor="#212121"
                 android:textSize="16sp" />
 
+
+
         </LinearLayout>
+
     </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avalie este livro:"
+        android:textColor="#212121"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBarAlemanha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:rating="0.0"
+        android:stepSize="0.5" />
 
 </LinearLayout>
 
