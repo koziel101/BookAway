@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -85,6 +86,22 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View view) {
                 attemptLogin();
+            }
+        });
+
+        Button entrarFace = (Button) findViewById(R.id.logarFace);
+        entrarFace.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                attemptLogin();
+            }
+        });
+
+        final Button cadastrar = (Button) findViewById(R.id.loginCadastro);
+        cadastrar.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cadastro();
             }
         });
 
@@ -343,6 +360,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = null;
             showProgress(false);
         }
+    }
+    private void cadastro(){
+        Intent it = new Intent(LoginActivity.this, CadastroActivity.class);
+        startActivity(it);
     }
 }
 
