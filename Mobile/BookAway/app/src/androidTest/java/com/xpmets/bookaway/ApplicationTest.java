@@ -1,4 +1,4 @@
-package com.example.android.bookaway;
+package com.xpmets.bookaway;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

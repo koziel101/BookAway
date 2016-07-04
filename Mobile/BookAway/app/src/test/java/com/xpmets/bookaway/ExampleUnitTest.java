@@ -1,4 +1,4 @@
-package com.example.android.bookaway;
+package com.xpmets.bookaway;
 
 import org.junit.Test;
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/estante"
+            android:title="Minha Estante" />
+        <item
+            android:id="@+id/interesses"
+            android:title="Interesses" />
+        <item
+            android:id="@+id/conta"
+            android:title="Informações da Conta" />
+        <item
+            android:id="@+id/entrar"
+            android:title="Entrar" />
+        <item
+            android:id="@+id/sair"
+            android:title="Sair" />
+    </group>
+</menu>
