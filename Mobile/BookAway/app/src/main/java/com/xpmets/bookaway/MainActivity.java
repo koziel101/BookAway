@@ -1,5 +1,6 @@
 package com.xpmets.bookaway;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -110,7 +111,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.perquisa) {
+            Intent it = new Intent(this, SearchActivity.class);
+            startActivity(it);
             return true;
         }
 
