@@ -105,11 +105,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/tag_sell"
+                            android:onClick="vender1"
                             android:padding="6dp"
                             android:text="Vender"
                             android:textAllCaps="true"
                             android:textColor="#FFFFFF"
-                            android:onClick="vender1"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by Hiago on 03/07/2016.
@@ -17,11 +18,14 @@ public class MyBookshelfActivity extends Fragment {
 
     private Context context;
     private View mView;
+    private boolean sell1 = true, borrow1 = true, exchange1 = true, give1 = true;
+    private boolean sell2 = true, borrow2 = true, exchange2 = true, give2 = true;
+    private boolean sell3 = true, borrow3 = true, exchange3 = true, give3 = true;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.content_my_bookshelf,container,false);
+        View v = inflater.inflate(R.layout.content_my_bookshelf, container, false);
         mView = v;
         context = getActivity().getApplicationContext();
 
@@ -48,16 +52,36 @@ public class MyBookshelfActivity extends Fragment {
                 selecionarLivro();
             }
         });
-
         return v;
     }
 
-    public void vender1(){
+    @Override
+    public void onResume() {
+
+        super.onResume();
+        vender1();
 
     }
 
+    public void vender1() {
+        TextView text = (TextView) getActivity().findViewById(R.id.tag_sell_1);
+        //Cria um listener para um botao que vai diretamente na SettingsActivity
+        text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView text = (TextView) getActivity().findViewById(R.id.tag_sell_1);
+                if (sell1 == true) {
+                    text.setBackground(getResources().getDrawable(R.drawable.tag_unmarked));
+                    sell1 = false;
+                } else {
+                    text.setBackground(getResources().getDrawable(R.drawable.tag_sell));
+                    sell1 = true;
+                }
+            }
+        });
+    }
 
-    private void selecionarLivro(){
+    private void selecionarLivro() {
         Intent it = new Intent(context, SelectedBookActivity.class);
         startActivity(it);
     }
