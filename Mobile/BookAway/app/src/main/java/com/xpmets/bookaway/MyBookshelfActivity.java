@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 /**
- * Created by Matheus on 03/07/2016.
+ * Created by Hiago on 03/07/2016.
  */
 public class MyBookshelfActivity extends Fragment {
 
@@ -25,8 +25,24 @@ public class MyBookshelfActivity extends Fragment {
         mView = v;
         context = getActivity().getApplicationContext();
 
-        final ImageView livro = (ImageView) mView.findViewById(R.id.imagemLivro);
-        livro.setOnClickListener(new View.OnClickListener() {
+        final ImageView livro1 = (ImageView) mView.findViewById(R.id.imagemLivro1);
+        livro1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selecionarLivro();
+            }
+        });
+
+        final ImageView livro2 = (ImageView) mView.findViewById(R.id.imagemLivro2);
+        livro2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selecionarLivro();
+            }
+        });
+
+        final ImageView livro3 = (ImageView) mView.findViewById(R.id.imagemLivro3);
+        livro3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 selecionarLivro();
@@ -35,6 +51,11 @@ public class MyBookshelfActivity extends Fragment {
 
         return v;
     }
+
+    public void vender1(){
+
+    }
+
 
     private void selecionarLivro(){
         Intent it = new Intent(context, SelectedBookActivity.class);
