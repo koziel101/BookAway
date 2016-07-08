@@ -13,6 +13,6 @@
     </string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="facebook_app_id">1572580189709221</string>
     <string name="action_settings">Settings</string>
 </resources>
