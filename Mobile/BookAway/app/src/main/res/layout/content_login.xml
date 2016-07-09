@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
@@ -29,8 +29,8 @@
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -40,11 +40,11 @@
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
                     android:hint="Login"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true"
-                    android:layout_marginBottom="20dp"/>
+                    android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -56,46 +56,55 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
                     android:hint="Senha"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="Senha"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true"
-                    android:layout_marginBottom="30dp"/>
+                    android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/logar"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_width="175dp"
+                android:layout_height="36dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="8dp"
                 android:background="#64DD17"
-                android:textColor="#FFFFFF"
-                android:text="ENTRAR"
-                android:textStyle="bold" />
-
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Entrar"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/loginCadastro"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_width="175dp"
+                android:layout_height="36dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
                 android:background="#4A148C"
-                android:textColor="#FFFFFF"
-                android:text="CADASTRAR"
-                android:textStyle="bold" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Cadastrar"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="175dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textAllCaps="true" />
 
         </LinearLayout>
     </ScrollView>
