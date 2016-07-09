@@ -32,6 +32,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,18 +75,23 @@ public class LoginActivity extends Fragment implements LoaderManager.LoaderCallb
     private View mProgressView;
     private View mLoginFormView;
     private Context context;
+    CallbackManager callbackManager;
 
     @Nullable
     @Override
-    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.content_login,container,false);
+        context = getActivity().getApplicationContext();
+
+        callbackManager = CallbackManager.Factory.create();
+        FacebookSdk.sdkInitialize(context);
+        AppEventsLogger.activateApp(context);
+
+        View v = inflater.inflate(R.layout.content_login, container, false);
         this.mView = v;
         // Set up the login form.
 
         populateAutoComplete();
-
-        context = getActivity().getApplicationContext();
 
         mLoginFormView = mView.findViewById(R.id.login_form);
         mProgressView = mView.findViewById(R.id.login_progress);
@@ -104,14 +117,6 @@ public class LoginActivity extends Fragment implements LoaderManager.LoaderCallb
             }
         });
 
-        Button entrarFace = (Button) mView.findViewById(R.id.logarFace);
-        entrarFace.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
-
         final Button cadastrar = (Button) mView.findViewById(R.id.loginCadastro);
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +126,23 @@ public class LoginActivity extends Fragment implements LoaderManager.LoaderCallb
         });
 
 
+        LoginButton loginButton = (LoginButton) mView.findViewById(R.id.login_button);
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+            }
+        });
 
         return v;
     }
@@ -375,7 +397,8 @@ public class LoginActivity extends Fragment implements LoaderManager.LoaderCallb
             showProgress(false);
         }
     }
-    private void cadastro(){
+
+    private void cadastro() {
         Intent it = new Intent(context, CadastroActivity.class);
         startActivity(it);
     }
