@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
                         return true;
                     case R.id.conta:
-                        UserAccountEditActivity perfil = new UserAccountEditActivity();
+                        UserAccountInfoActivity perfil = new UserAccountInfoActivity();
                         android.support.v4.app.FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction2.replace(R.id.frame, perfil);
                         fragmentTransaction2.commit();

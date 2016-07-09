@@ -1,19 +1,39 @@
-package com.example.alunoinf.myapplication;
+package com.xpmets.bookaway;
 
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 
-public class UserAccountInfoActivity extends AppCompatActivity {
+public class UserAccountInfoActivity extends Fragment {
+
+    private Context context;
+    private View mView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_account_info);
+    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+        View v = inflater.inflate(R.layout.content_user_account_info,container,false);
+        context = getActivity().getApplicationContext();
+        this.mView = v;
+
+        Button editar = (Button) mView.findViewById(R.id.editar_perfil);
+        editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editUserAccount();
+            }
+        });
+
+        return v;
     }
 
     private void editUserAccount(){
-        Intent it = new Intent(this, UserAccountEditActivity.class);
+        Intent it = new Intent(context, UserAccountEditActivity.class);
         startActivity(it);
     }
 }

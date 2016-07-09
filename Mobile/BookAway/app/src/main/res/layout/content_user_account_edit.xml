@@ -124,7 +124,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="OK"
+                android:text="SALVAR"
                 android:textSize="28sp"
                 android:textAllCaps="true"
                 android:layout_marginTop="10dp"
@@ -132,7 +132,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_alignParentBottom="true"
                 android:background="#00ff00"
-                android:id="@+id/ok_button"/>
+                android:id="@+id/salvar_button"
+                android:onClick="salvar"/>
         </RelativeLayout>
 
     </ScrollView>
