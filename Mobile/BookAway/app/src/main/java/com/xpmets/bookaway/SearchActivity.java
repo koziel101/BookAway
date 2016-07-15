@@ -3,6 +3,8 @@ package com.xpmets.bookaway;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -14,14 +16,14 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_search);
-        //mRecyclerView = (RecyclerView) findViewById(R.id.search_recycle_view);
-
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        //mRecyclerView.setHasFixedSize(true);
-
-        // use a linear layout manager
-        //mLayoutManager = new LinearLayoutManager(this);
-        //mRecyclerView.setLayoutManager(mLayoutManager);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu, menu);
+
+        return true;
+    }
+
 }
