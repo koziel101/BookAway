@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction3.commit();
                         return true;
                     case R.id.sair:
-
+                        Toast.makeText(getApplicationContext(), "Perfil Salvo", Toast.LENGTH_SHORT).show();
                         return true;
                     default:
                         Toast.makeText(getApplicationContext(), "Somethings Wrong", Toast.LENGTH_SHORT).show();

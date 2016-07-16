@@ -148,7 +148,8 @@
                         android:paddingRight="16dp"
                         android:text="Salvar"
                         android:textAllCaps="true"
-                        android:textColor="#FFFFFF"/>
+                        android:textColor="#FFFFFF"
+                        android:onClick="salvar"/>
                 </LinearLayout>
             </RelativeLayout>
         </android.support.v7.widget.CardView>

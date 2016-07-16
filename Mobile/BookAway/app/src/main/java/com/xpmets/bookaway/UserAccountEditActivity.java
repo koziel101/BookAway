@@ -15,7 +15,7 @@ public class UserAccountEditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_user_account_edit);
-        Button editar = (Button) findViewById(R.id.editar_perfil);
+        Button editar = (Button) findViewById(R.id.salvar_button);
         editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
