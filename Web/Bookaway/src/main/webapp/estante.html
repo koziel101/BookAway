@@ -186,27 +186,24 @@
                     <form method="post" action="upload" enctype="multipart/form-data">
                         <div class="col-md-4">
                             <div class="media-left"><img src="img/estante/capa_livro.jpg" width="190" height="290" alt="capa">
-                                <input type="file" name="photo"><br>
+                                <input type="file" name="photo" required="required">
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <br></br>
-                            <form method="post" action="upload" enctype="multipart/form-data">
+                            <br>
                             <h6>Nome</h6>
-                            <input type="text" class="form-control" id="Nome" placeholder="Nome">
+                            <input type="text" required="required" class="form-control" id="Nome" placeholder="Nome">
 
                             <h6>Coleção</h6>
-                            <input type="text" class="form-control" id="Colecao" placeholder="Coleção">
+                            <input type="text" required="required" class="form-control" id="Colecao" placeholder="Coleção">
 
                             <h6>Autor(a)</h6>
-                            <input type="text" class="form-control" id="Autor" placeholder="Autor(a)">
+                            <input type="text" required="required" class="form-control" id="Autor" placeholder="Autor(a)">
 
                             <h6>Gênero</h6>
-                            <input type="text" class="form-control" id="Genero" placeholder="Gênero">
-                        </div>
-                        <textarea class="form-control" rows="9" placeholder="Descrição"></textarea><br>
-                        <div align="center">
-                        <input type="submit" value="Adicionar livro" class="btn-block page-scroll" style='background: #808080; width: 250px'>
+                            <input type="text" required="required" class="form-control" id="Genero" placeholder="Gênero"><br>
+                            
+                            <input type="submit" value="Adicionar livro" class="btn-block page-scroll" style='background: #808080;'>
                         </div>
                     </form>
                 </div>
