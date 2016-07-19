@@ -83,8 +83,8 @@
                             <table>
                                 <tr>
                                     <td style="padding-right: 20px; padding-left: 50px;"> 
-                                        <img src="img/estante/Harry_Potter.jpg" width="190" height="290" alt="HarryPotter">
-                                        <a class="btn btn-light" href="#portfolio">Remover Livro</a>
+                                        <img src="img/estante/Harry_Potter.jpg" width="200" height="300" alt="HarryPotter">
+                                        <button class="btn btn-transparent" href="portifolio" style="width:95px; padding: 15px;">Editar</button><button class="btn btn-light" href="portifolio" style="width:105px; padding: 15px;">Remover</button>
                                     </td>
                                     <td class="media-body">
                                         <h3>Harry Potter e as Relíquias da Morte</h3>
@@ -183,13 +183,12 @@
                 <h2>Adicionar Livro</h2>
                 <hr class="light-sep">
                 <div class="services-box">
-                    <form method="post" action="upload" enctype="multipart/form-data">
-                        <div class="col-md-4">
-                            <div class="media-left"><img src="img/estante/capa_livro.jpg" width="190" height="290" alt="capa">
-                                <input type="file" name="photo" required="required">
-                            </div>
+                    <div class="col-md-4" style="margin-left: 50px;">
+                        <div class="media-left"><img src="img/estante/capa_livro.jpg" width="190" height="290" alt="capa">
                         </div>
-                        <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                        <form method="post" action="upload" enctype="multipart/form-data">
                             <br>
                             <h6>Nome</h6>
                             <input type="text" required="required" class="form-control" id="Nome" placeholder="Nome">
@@ -201,11 +200,14 @@
                             <input type="text" required="required" class="form-control" id="Autor" placeholder="Autor(a)">
 
                             <h6>Gênero</h6>
-                            <input type="text" required="required" class="form-control" id="Genero" placeholder="Gênero"><br>
-                            
-                            <input type="submit" value="Adicionar livro" class="btn-block page-scroll" style='background: #808080;'>
-                        </div>
-                    </form>
+                            <input type="text" required="required" class="form-control" id="Genero" placeholder="Gênero">
+
+                            <h6>Capa</h6>
+                            <input type="file" name="photo" required="required"><br>
+
+                            <input type="submit"  value="Adicionar Livro" class="btn-block page-scroll" style='background: #808080;'>
+                        </form>
+                    </div>
                 </div>
             </div>
             <hr class="light-sep">

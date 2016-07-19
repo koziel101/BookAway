@@ -23,7 +23,6 @@ public class UploadServlet extends HttpServlet {
 
   @Override
   protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     String method = req.getMethod();
 
     if (method.equals("POST")) {
