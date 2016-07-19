@@ -39,6 +39,11 @@ public class UploadServlet extends HttpServlet {
             FileItem item = (FileItem) iterator.next();
 
             if (!item.isFormField()) {
+             
+              String nome = (String) req.getAttribute("Nome");
+              String colecao = (String) req.getAttribute("Colecao");
+              String autor = (String) req.getAttribute("Autor");
+              String genero = (String) req.getAttribute("Genero");
               String fileName = item.getName();
               
               
