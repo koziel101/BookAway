@@ -183,15 +183,15 @@
                 <h2>Adicionar Livro</h2>
                 <hr class="light-sep">
                 <div class="services-box">
-                    <div>
+                    <form method="post" action="upload" enctype="multipart/form-data">
                         <div class="col-md-4">
                             <div class="media-left"><img src="img/estante/capa_livro.jpg" width="190" height="290" alt="capa">
-                                <a href="#services" class="btn-block page-scroll" style='background: #808080;' >Adicionar capa</a>
+                                <input type="file" name="photo"><br>
                             </div>
                         </div>
-
                         <div class="col-md-6">
                             <br></br>
+                            <form method="post" action="upload" enctype="multipart/form-data">
                             <h6>Nome</h6>
                             <input type="text" class="form-control" id="Nome" placeholder="Nome">
 
@@ -203,20 +203,12 @@
 
                             <h6>Gênero</h6>
                             <input type="text" class="form-control" id="Genero" placeholder="Gênero">
-
                         </div>
-                    </div>
-                    <br>
-                    
-                    
-                    <div class="form-group">
-
-                        <textarea class="form-control" rows="9" placeholder="Descrição"></textarea>
-                    </div>
-                    <br>
-                    <div align="center">
-                        <a href="#services" class="btn-block page-scroll" style='background: #808080; width: 250px' >Adicionar Livro</a>
-                    </div>
+                        <textarea class="form-control" rows="9" placeholder="Descrição"></textarea><br>
+                        <div align="center">
+                        <input type="submit" value="Adicionar livro" class="btn-block page-scroll" style='background: #808080; width: 250px'>
+                        </div>
+                    </form>
                 </div>
             </div>
             <hr class="light-sep">
