@@ -47,12 +47,8 @@ public class ControlaUsuario extends HttpServlet {
                     novoUsuario.setLogin(request.getParameter("login"));
                     novoUsuario.setSenha(request.getParameter("senha"));
                     novoUsuario.setEmail(request.getParameter("email"));
-                    try {
-                        dao.inserir(novoUsuario);
-                        redirect = cadastrar;
-                    } catch (SQLException ex) {
-                        Logger.getLogger(ControlaUsuario.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    dao.inserir(novoUsuario);
+                    redirect = cadastrar;
                     break;
 
                 case "delete":

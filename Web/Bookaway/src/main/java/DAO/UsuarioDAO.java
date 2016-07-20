@@ -22,11 +22,12 @@ public class UsuarioDAO {
         conn = Conexao.getConnection();
     }
 
-    public boolean inserir(Usuario usuario) throws SQLException {
+    public boolean inserir(Usuario usuario){
         String sql = "INSERT INTO usuario(nome, login, email, senha) VALUES(?,?,?,?)";
         Boolean retorno = false;
-        PreparedStatement pst = conn.prepareStatement(sql);
+        PreparedStatement pst;
         try {
+            pst = conn.prepareStatement(sql);
             pst.setString(1, usuario.getNome());
             pst.setString(2, usuario.getLogin());
             pst.setString(3, usuario.getEmail());
