@@ -6,10 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import Model.Usuario;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
 
 public class LivroDAO {
     
@@ -41,20 +37,20 @@ public class LivroDAO {
         return retorno;
     }
     
-    public void removeLivro(String capa) {
+    public void removeLivro(String id) {
         try {
-            String sql = "DELETE FROM livros WHERE capa=?";
+            String sql = "DELETE FROM livros WHERE id=?";
             PreparedStatement pst = conn.prepareStatement(sql);
-            pst.setString(1, capa);
+            pst.setString(1, id);
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
     
-    public void editLivro(Livro livro) {
+    public void editLivro(Livro livro, String id) {
         try {
-            String sql = "UPDATE livros set titulo=?, colecao=?, autor=?, genero?, capa?  where capa=?;";
+            String sql = "UPDATE livros set titulo=?, colecao=?, autor=?, genero?, capa?  where id=?;";
 
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1, livro.getTitulo());
@@ -62,7 +58,7 @@ public class LivroDAO {
             pst.setString(3, livro.getAutor());
             pst.setString(4, livro.getGenero());
             pst.setString(5, livro.getCapa());
-            pst.setString(6, livro.getCapa());
+            pst.setString(6, id);
 
             pst.executeUpdate();
         } catch (SQLException e) {

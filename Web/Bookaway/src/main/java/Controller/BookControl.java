@@ -58,7 +58,7 @@ public class BookControl extends HttpServlet {
                 altLivro.setGenero(request.getParameter("genero"));
                 altLivro.setCapa(request.getParameter("capa"));
 
-                dao.editLivro(altLivro);
+                dao.editLivro(altLivro, request.getParameter("id"));
 //                request.setAttribute("users", usuarioAlterado);
                 System.out.println("Usuario Alterado");
                 break;
