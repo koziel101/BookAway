@@ -58,7 +58,7 @@ public class ControlaUsuario extends HttpServlet {
                 case "delete":
                     dao.removeUser(uLogin);
                     redirect = deletar;
-                    request.setAttribute("users", dao.getAllUsers());
+                    request.setAttribute("usuario", dao.getAllUsers());
                     System.out.println("Usuário removido");
                     break;
 
@@ -75,15 +75,9 @@ public class ControlaUsuario extends HttpServlet {
                     redirect = alterar;
                     System.out.println("Usuario Alterado");
                     break;
-<<<<<<< HEAD
-                    
-                default :
-                    redirect = deletar;
-=======
 
                 default:
-                    redirect = listar;
->>>>>>> origin/master
+                    redirect = UserRecord;
             }
 
             /*	request Dispatcher
