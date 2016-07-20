@@ -1,4 +1,4 @@
-function adicionaDiv(){
+function adicionaDiv() {
     var parte1 = "<div class=\"col-md-4\">";
     var parte2 = "<table>" + "<tr>";
     var parte3 = "<td style=\"padding-right: 20px; padding-left: 50px;\">";
@@ -9,6 +9,6 @@ function adicionaDiv(){
     var parte8 = "<p>" + colecao + "<\p>";
     var parte9 = "<p>" + autor + "<\p>";
     var parte10 = "<\td>" + "<\tr>" + "<\table>";
-     document.getElementById("tabela").innerHTML += parte1+ parte2 + parte3 + parte4 + parte5 + parte6 + parte7 + parte8 + parte9 + parte10;
+    document.getElementById("tabela").innerHTML += parte1 + parte2 + parte3 + parte4 + parte5 + parte6 + parte7 + parte8 + parte9 + parte10;
 }
 

@@ -8,14 +8,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LivroDAO {
-    
+
     private Connection conn;
 
     public LivroDAO() {
         conn = Conexao.getConnection();
     }
-    
-    public boolean inserirLivro (Livro livro){
+
+    public boolean inserirLivro(Livro livro) {
         String sql = "INSERT INTO livros(titulo, colecao, autor, genero, capa) VALUES(?,?,?,?,?)";
         Boolean retorno = false;
         PreparedStatement pst;
@@ -36,7 +36,7 @@ public class LivroDAO {
         }
         return retorno;
     }
-    
+
     public void removeLivro(String id) {
         try {
             String sql = "DELETE FROM livros WHERE id=?";
@@ -47,7 +47,7 @@ public class LivroDAO {
             e.printStackTrace();
         }
     }
-    
+
     public void editLivro(Livro livro, String id) {
         try {
             String sql = "UPDATE livros set titulo=?, colecao=?, autor=?, genero?, capa?  where id=?;";
@@ -65,6 +65,5 @@ public class LivroDAO {
             e.printStackTrace();
         }
     }
-    
-    
+
 }

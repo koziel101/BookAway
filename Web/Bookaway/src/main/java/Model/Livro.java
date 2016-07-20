@@ -10,6 +10,7 @@ package Model;
  * @author Marjorie
  */
 public class Livro {
+
     private String titulo;
     private String colecao;
     private String genero;
@@ -55,5 +56,5 @@ public class Livro {
     public void setCapa(String capa) {
         this.capa = capa;
     }
-    
+
 }

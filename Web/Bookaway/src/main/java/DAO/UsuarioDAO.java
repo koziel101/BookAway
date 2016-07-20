@@ -22,7 +22,7 @@ public class UsuarioDAO {
         conn = Conexao.getConnection();
     }
 
-    public boolean inserir(Usuario usuario){
+    public boolean inserir(Usuario usuario) {
         String sql = "INSERT INTO usuario(nome, login, email, senha) VALUES(?,?,?,?)";
         Boolean retorno = false;
         PreparedStatement pst;

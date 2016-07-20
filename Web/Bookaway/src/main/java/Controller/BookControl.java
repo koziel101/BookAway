@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class BookControl extends HttpServlet {
-    
+
     private LivroDAO dao;
 
     public BookControl() {
@@ -29,9 +29,9 @@ public class BookControl extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-         String action = request.getParameter("action");
-        
+
+        String action = request.getParameter("action");
+
         switch (action) {
             case "addLivro":
                 Livro livro = new Livro();
