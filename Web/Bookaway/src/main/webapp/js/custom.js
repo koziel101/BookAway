@@ -31,7 +31,6 @@ $(document).ready(function () {
     /***************** Owl Carousel ******************/
 
     $("#owl-hero").owlCarousel({
-
         navigation: true, // Show next and prev buttons
         slideSpeed: 300,
         paginationSpeed: 400,
@@ -55,7 +54,6 @@ $(document).ready(function () {
     /***************** Owl Carousel Testimonials ******************/
 
     $("#owl-testi").owlCarousel({
-
         navigation: false, // Show next and prev buttons
         paginationSpeed: 400,
         singleItem: true,
@@ -99,11 +97,11 @@ $(document).ready(function () {
     google.maps.event.addDomListener(window, 'load', initialize);
 
     /***************** Wow.js ******************/
-    
+
     new WOW().init();
-    
+
     /***************** Preloader ******************/
-    
+
     var preloader = $('.preloader');
     $(window).load(function () {
         preloader.remove();

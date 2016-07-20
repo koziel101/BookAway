@@ -76,17 +76,16 @@ public class UsuarioDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                
+
                 Usuario usuario = new Usuario();
                 usuario.setNome(rs.getString("nome"));
                 usuario.setLogin(rs.getString("login"));
                 usuario.setSenha(rs.getString("senha"));
                 usuario.setEmail(rs.getString("email"));
-                
+
                 liste_utilisateur.add(usuario);
             }
-        } 
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return liste_utilisateur;

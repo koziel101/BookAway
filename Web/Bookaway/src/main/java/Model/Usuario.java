@@ -1,6 +1,7 @@
 package Model;
 
 public class Usuario {
+
     private String nome;
     private String login;
     private String email;
@@ -37,5 +38,5 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
+
 }
