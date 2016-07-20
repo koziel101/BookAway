@@ -29,21 +29,20 @@ public class ControlaUsuario extends HttpServlet {
 
     // doGet perimite recuperar as informações
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response){
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         //Variavel de Redirecionamento
         String redirect = "";
         String uLogin = request.getParameter("login");
         //Variavel com a ação a ser executada no bando de Dados
         String action = request.getParameter("action");
-        
+
         if ((uLogin == null) || (uLogin.isEmpty())) {
             System.out.println("Erro: Login nullo ou vazio");
-        }
-        else{
-            switch (action){
+        } else {
+            switch (action) {
                 case "insert":
                     Usuario novoUsuario = new Usuario();
-                    
+
                     novoUsuario.setNome(request.getParameter("nome"));
                     novoUsuario.setLogin(request.getParameter("login"));
                     novoUsuario.setSenha(request.getParameter("senha"));
@@ -55,32 +54,38 @@ public class ControlaUsuario extends HttpServlet {
                         Logger.getLogger(ControlaUsuario.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     break;
-                
+
                 case "delete":
                     dao.removeUser(uLogin);
                     redirect = deletar;
                     request.setAttribute("users", dao.getAllUsers());
                     System.out.println("Usuário removido");
                     break;
-                    
+
                 case "edit":
                     Usuario usuarioAlterado = new Usuario();
-                    
+
                     usuarioAlterado.setNome(request.getParameter("nome"));
                     usuarioAlterado.setLogin(request.getParameter("login"));
                     usuarioAlterado.setSenha(request.getParameter("senha"));
                     usuarioAlterado.setEmail(request.getParameter("email"));
-                    
+
                     dao.editUser(usuarioAlterado);
                     request.setAttribute("users", usuarioAlterado);
                     redirect = alterar;
                     System.out.println("Usuario Alterado");
                     break;
+<<<<<<< HEAD
                     
                 default :
                     redirect = deletar;
+=======
+
+                default:
+                    redirect = listar;
+>>>>>>> origin/master
             }
-            
+
             /*	request Dispatcher
             *  1- request : O request que chega do client
             *  2- dispatcher : O redirecionamento
@@ -95,7 +100,7 @@ public class ControlaUsuario extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response){
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         doGet(request, response);
     }
 }
