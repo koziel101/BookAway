@@ -1,7 +1,7 @@
 <%-- 
     Document   : estante
     Created on : 20/07/2016, 16:54:30
-    Author     : Marjorie
+    Author     : Hiago
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -91,7 +91,7 @@
                                 <tr>
                                     <td style="padding-right: 20px; padding-left: 50px;"> 
                                         <img src="img/estante/Harry_Potter.jpg" width="200" height="300" alt="HarryPotter">
-                                        <a class="btn btn-transparent" href="#edit"  class="btn-block page-scroll"  accesskey=""style="width:95px; padding: 15px;">Editar</a><a class="btn btn-light" href="portifolio" style="width:105px; padding: 15px;">Remover</a>
+                                        <a class="btn btn-transparent" href="EditarLivro.do"  class="btn-block page-scroll"  accesskey=""style="width:95px; padding: 15px;">Editar</a><a class="btn btn-light" href="" style="width:105px; padding: 15px;">Remover</a>
                                     </td>
                                     <td class="media-body">
                                         <h3>Harry Potter e as Relíquias da Morte</h3>
@@ -184,10 +184,10 @@
             <hr class="light-sep">
         </section>
 
-        <!-- Adicionar ou Editar Livro-->
+        <!-- Adicionar Livro-->
         <section id="edit">
             <div class="container">
-                <h2>Adicionar ou Editar Livro</h2>
+                <h2>Adicionar Livro</h2>
                 <hr class="light-sep">
                 <div class="services-box">
                     <div class="col-md-4" style="margin-left: 50px;">

@@ -1,11 +1,16 @@
+<%-- 
+    Document   : editarLivro
+    Created on : Jul 20, 2016, 5:33:46 PM
+    Author     : Hiago
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
     <head>
-
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-        <title>BookAway Livro</title>
+        <title>BookAway editar livro</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +22,9 @@
         <link href="bootstrap-assets/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Style -->
-
+        <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+        <link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
         <link href="plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
         <link href="plugins/Icons/et-line-font/style.css" rel="stylesheet">
         <link href="plugins/animate.css/animate.css" rel="stylesheet">
@@ -32,8 +39,8 @@
         <![endif]-->
 
     </head>
-
     <body>
+        
         <!-- Preloader
             ============================================= -->
         <div class="preloader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
@@ -49,13 +56,14 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+                        <a class="navbar-brand" href="#"></a>
                     </div>
                     <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
                         <div class="col-md-8 col-xs-12 nav-wrap">
                             <ul class="nav navbar-nav">
-                                <li><a href="#welcome" class="page-scroll">Home</a></li>
+                                <li><a href="livrosemmovimento.html" >Home</a></li>
                                 <li><a href="pesquisa.html">Pesquisar</a></li>
-                                <li><a href="estante.jsp">Estante</a></li>
+                                <li><a href="estante.jsp" class="page-scroll">Estante</a></li>
                                 <li><a href="perfil.html">Minha Conta</a></li>
                                 <li><a href="index.html">Sair</a></li>
                             </ul>
@@ -67,27 +75,47 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
         </section>
 
-        <!-- Welcome
-            ============================================= -->
-        <section id="welcome">
+        <!-- Editar Livro-->
+        <section id="edit">
             <div class="container">
-                <h2>The Fellowship of the Ring</h2>
-                <img class="img-responsive center-block" src="img/estante/fotr.jpg" alt="fotr">
+                <h2>Editar Livro</h2>
+                <hr class="light-sep">
+                <div class="services-box">
+                    <div class="col-md-4" style="margin-left: 50px;">
+                        <div class="media-left"><img src="img/estante/capa_livro.jpg" width="190" height="290" alt="capa">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form method="post" action="upload" enctype="multipart/form-data">
+                            <br>
+                            <h6>Título</h6>
+                            <input type="text" required="required" class="form-control" name="Nome" placeholder="Nome">
+
+                            <h6>Coleção</h6>
+                            <input type="text" class="form-control" name="Colecao" placeholder="Colecao">
+
+                            <h6>Autor(a)</h6>
+                            <input type="text" required="required" class="form-control" name="Autor" placeholder="Autor(a)">
+
+                            <h6>Gênero</h6>
+                            <input type="text" required="required" class="form-control" name="Genero" placeholder="Gênero">
+
+                            <h6>Capa</h6>
+                            <input type="file" name="photo" required="required" name="Capa"><br>
+
+                            <input type="submit"  value="Adicionar Livro" class="btn-block page-scroll" style='background: #808080;'>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="container">
-                <h4><span>Coleção:</span> The Lord of the Rings</h4>
-                <h3><span>Autor:</span> J. R. R. Tolkien</h3>
-                <h4><span>Descrição</span></h4>
-                <p>Somente venda. Livro com um ano e meio de uso, nenhuma página rasgada.</p>
-            </div>
+            <hr class="light-sep">
         </section>
+
 
         <!-- Footer
-            ============================================= -->
+                ============================================= -->
         <footer>
             <div class="container">
                 <h1>BookAway</h1>
@@ -110,5 +138,5 @@
         <!-- GOOGLE MAP -->
         <script src="https://maps.googleapis.com/maps/api/js"></script>
     </body>
-
+    </body>
 </html>

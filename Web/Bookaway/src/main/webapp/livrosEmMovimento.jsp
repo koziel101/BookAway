@@ -64,7 +64,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="#welcome" class="page-scroll">Home</a></li>
                                 <li><a href="pesquisa.html">Pesquisar</a></li>
-                                <li><a href="estante.html">Estante</a></li>
+                                <li><a href="estante.jsp">Estante</a></li>
                                 <li><a href="perfil.html">Minha Conta</a></li>
                                 <li><a href="index.html">Sair</a></li>
                             </ul>
