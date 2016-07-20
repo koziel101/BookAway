@@ -62,7 +62,7 @@
                     <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
                         <div class="col-md-8 col-xs-12 nav-wrap">
                             <ul class="nav navbar-nav">
-                                <li><a href="livrosemmovimento.jsp" >Home</a></li>
+                                <li><a href="livrosEmMovimento.jsp" >Home</a></li>
                                 <li><a href="pesquisa.html">Pesquisar</a></li>
                                 <li><a href="#services" class="page-scroll">Estante</a></li>
                                 <li><a href="perfil.html">Minha Conta</a></li>
