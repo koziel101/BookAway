@@ -17,10 +17,10 @@ import javax.servlet.RequestDispatcher;
 public class ControlaUsuario extends HttpServlet {
 
     private static final String UserRecord = null;
-    private static String INSERT = "/NovoUsuario.jsp";//variable qui indique l'URL
-    private static String edit = "/EditarConta.jsp";
-    private static String delete = "/RemoverConta.jsp";
-    private static String liste = "/ListarUsuarios.jsp";
+    private static String cadastrar = "/NovoUsuario.jsp";
+    private static String alterar = "/EditarConta.jsp";
+    private static String deletar = "/RemoverConta.jsp";
+    private static String listar = "/ListarUsuarios.jsp";
     private UsuarioDAO dao;
 
     public ControlaUsuario() {
@@ -49,25 +49,19 @@ public class ControlaUsuario extends HttpServlet {
                     novoUsuario.setLogin(request.getParameter("login"));
                     novoUsuario.setSenha(request.getParameter("senha"));
                     novoUsuario.setEmail(request.getParameter("email"));
-                    novoUsuario.setCEP(request.getParameter("cep"));
                     try {
                         dao.inserir(novoUsuario);
+                        redirect = cadastrar;
                     } catch (SQLException ex) {
                         Logger.getLogger(ControlaUsuario.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     break;
                 
                 case "delete":
-                    String userLogin = request.getParameter("ID");
-                    dao.removeUser(userLogin);
-                    redirect = liste;
+                    dao.removeUser(uLogin);
+                    redirect = deletar;
                     request.setAttribute("users", dao.getAllUsers());
                     System.out.println("Usuário removido");
-                    break;
-                    
-                case "editform":
-                    request.setAttribute("login", request.getParameter("login"));
-                    redirect = edit;
                     break;
                     
                 case "edit":
@@ -77,21 +71,15 @@ public class ControlaUsuario extends HttpServlet {
                     usuarioAlterado.setLogin(request.getParameter("login"));
                     usuarioAlterado.setSenha(request.getParameter("senha"));
                     usuarioAlterado.setEmail(request.getParameter("email"));
-                    usuarioAlterado.setCEP(request.getParameter("cep"));
                     
                     dao.editUser(usuarioAlterado);
                     request.setAttribute("users", usuarioAlterado);
-                    redirect = liste;
+                    redirect = alterar;
                     System.out.println("Usuario Alterado");
                     break;
                     
-                case "listuser":
-                    redirect = UserRecord;
-                    request.setAttribute("users", dao.getAllUsers());
-                    break;
-                    
                 default :
-                    redirect = INSERT;
+                    redirect = listar;
             }
             
             /*	request Dispatcher

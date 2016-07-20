@@ -23,15 +23,14 @@ public class UsuarioDAO {
     }
 
     public boolean inserir(Usuario usuario) throws SQLException {
-        String sql = "INSERT INTO usuario(nome, login, CEP, email, senha) VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO usuario(nome, login, email, senha) VALUES(?,?,?,?)";
         Boolean retorno = false;
         PreparedStatement pst = conn.prepareStatement(sql);
         try {
             pst.setString(1, usuario.getNome());
             pst.setString(2, usuario.getLogin());
-            pst.setString(3, usuario.getCEP());
-            pst.setString(4, usuario.getEmail());
-            pst.setString(5, usuario.getSenha());
+            pst.setString(3, usuario.getEmail());
+            pst.setString(4, usuario.getSenha());
 
             if (pst.executeUpdate() == 0) {
                 retorno = true;
@@ -56,14 +55,13 @@ public class UsuarioDAO {
 
     public void editUser(Usuario usuario) {
         try {
-            String sql = "UPDATE utilisateur set nome=? ,CEP=?, email=?, senha=?  where login=?;";
+            String sql = "UPDATE utilisateur set nome=?, email=?, senha=?  where login=?;";
 
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1, usuario.getNome());
-            pst.setString(2, usuario.getCEP());
-            pst.setString(3, usuario.getEmail());
-            pst.setString(4, usuario.getSenha());
-            pst.setString(5, usuario.getLogin());
+            pst.setString(2, usuario.getEmail());
+            pst.setString(3, usuario.getSenha());
+            pst.setString(4, usuario.getLogin());
 
             pst.executeUpdate();
         } catch (SQLException e) {
@@ -72,27 +70,23 @@ public class UsuarioDAO {
     }
 
     public List getAllUsers() {
-        /* on declare une variable de type liste pour mettre  
-		 * les enregisrement de la table utilisateur dans cette liste
-		 * */
         List liste_utilisateur = new ArrayList();
         try {
             String sql = "SELECT * FROM utilisateur";
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                //Pour chaque enregistrement on cr�e une instance de la classe userBean
+                
                 Usuario usuario = new Usuario();
                 usuario.setNome(rs.getString("nome"));
                 usuario.setLogin(rs.getString("login"));
                 usuario.setSenha(rs.getString("senha"));
                 usuario.setEmail(rs.getString("email"));
-                usuario.setCEP(rs.getString("cep"));
-                /* on met cette instance dans la liste */
+                
                 liste_utilisateur.add(usuario);
             }
-            /* g�rer les excepions */
-        } catch (SQLException e) {
+        } 
+        catch (SQLException e) {
             e.printStackTrace();
         }
         return liste_utilisateur;

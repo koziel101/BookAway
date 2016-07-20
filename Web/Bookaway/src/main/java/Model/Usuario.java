@@ -5,7 +5,6 @@ public class Usuario {
     private String login;
     private String email;
     private String senha;
-    private String CEP;
 
     public String getNome() {
         return nome;
@@ -37,14 +36,6 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public String getCEP() {
-        return CEP;
-    }
-
-    public void setCEP(String CEP) {
-        this.CEP = CEP;
     }
     
 }
