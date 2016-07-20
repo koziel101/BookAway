@@ -62,11 +62,11 @@
                     <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
                         <div class="col-md-8 col-xs-12 nav-wrap">
                             <ul class="nav navbar-nav">
-                                <li><a href="livrosemmovimento.html" >Home</a></li>
+                                <li><a href="livrosemmovimento.jsp" >Home</a></li>
                                 <li><a href="pesquisa.html">Pesquisar</a></li>
                                 <li><a href="#services" class="page-scroll">Estante</a></li>
                                 <li><a href="perfil.html">Minha Conta</a></li>
-                                <li><a href="index.html">Sair</a></li>
+                                <li><a href="index.jsp">Sair</a></li>
                             </ul>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                 <tr>
                                     <td style="padding-right: 20px; padding-left: 50px;"> 
                                         <img src="img/estante/Harry_Potter.jpg" width="200" height="300" alt="HarryPotter">
-                                        <a class="btn btn-transparent" href="EditarLivro.do"  class="btn-block page-scroll"  accesskey=""style="width:95px; padding: 15px;">Editar</a><a class="btn btn-light" href="" style="width:105px; padding: 15px;">Remover</a>
+                                        <a class="btn btn-transparent" href="editarLivro.jsp"  class="btn-block page-scroll"  accesskey=""style="width:95px; padding: 15px;">Editar</a><a class="btn btn-light" href="" style="width:105px; padding: 15px;">Remover</a>
                                     </td>
                                     <td class="media-body">
                                         <h3>Harry Potter e as Relíquias da Morte</h3>

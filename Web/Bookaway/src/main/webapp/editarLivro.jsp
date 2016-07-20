@@ -40,7 +40,7 @@
 
     </head>
     <body>
-        
+
         <!-- Preloader
             ============================================= -->
         <div class="preloader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
@@ -61,11 +61,11 @@
                     <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
                         <div class="col-md-8 col-xs-12 nav-wrap">
                             <ul class="nav navbar-nav">
-                                <li><a href="livrosemmovimento.html" >Home</a></li>
+                                <li><a href="livrosemmovimento.jsp" >Home</a></li>
                                 <li><a href="pesquisa.html">Pesquisar</a></li>
                                 <li><a href="estante.jsp" class="page-scroll">Estante</a></li>
                                 <li><a href="perfil.html">Minha Conta</a></li>
-                                <li><a href="index.html">Sair</a></li>
+                                <li><a href="index.jsp">Sair</a></li>
                             </ul>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                             <h6>Capa</h6>
                             <input type="file" name="photo" required="required" name="Capa"><br>
 
-                            <input type="submit"  value="Adicionar Livro" class="btn-block page-scroll" style='background: #808080;'>
+                            <input type="submit"  value="Editar Livro" class="btn-block page-scroll" style='background: #808080;'>
                         </form>
                     </div>
                 </div>
@@ -138,5 +138,5 @@
         <!-- GOOGLE MAP -->
         <script src="https://maps.googleapis.com/maps/api/js"></script>
     </body>
-    </body>
+</body>
 </html>

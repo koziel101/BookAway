@@ -66,7 +66,7 @@
                                 <li><a href="pesquisa.html">Pesquisar</a></li>
                                 <li><a href="estante.jsp">Estante</a></li>
                                 <li><a href="perfil.html">Minha Conta</a></li>
-                                <li><a href="index.html">Sair</a></li>
+                                <li><a href="index.jsp">Sair</a></li>
                             </ul>
                         </div>
                     </div>
