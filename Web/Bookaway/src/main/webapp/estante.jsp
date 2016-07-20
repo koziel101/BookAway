@@ -1,3 +1,10 @@
+<%-- 
+    Document   : estante
+    Created on : 20/07/2016, 16:54:30
+    Author     : Marjorie
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -239,3 +246,4 @@
         <script src="https://maps.googleapis.com/maps/api/js"></script>
     </body>
 </html>
+
