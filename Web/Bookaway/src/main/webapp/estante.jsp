@@ -85,7 +85,7 @@
                 <h2>Resultados:</h2>
                 <hr class="light-sep">
                 <div class="services-box">
-                    <div class="row wow fadeInUp" data-wow-delay=".3s" style="padding-bottom: 40px;">
+                    <div id='tabela' class="row wow fadeInUp" data-wow-delay=".3s" style="padding-bottom: 40px;">
                         <div class="col-md-4">
                             <table>
                                 <tr>
@@ -195,7 +195,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <form method="post" action="upload" enctype="multipart/form-data">
+                        <form method="post" action="BookControl" enctype="multipart/form-data">
                             <br>
                             <h6>Título</h6>
                             <input type="text" required="required" class="form-control" name="Nome" placeholder="Nome">
