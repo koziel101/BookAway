@@ -1,3 +1,10 @@
+<%-- 
+    Document   : livrosEmMovimento
+    Created on : 20/07/2016, 16:11:31
+    Author     : Marjorie
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -216,3 +223,4 @@
     </body>
 
 </html>
+

@@ -18,9 +18,8 @@ public class ControlaUsuario extends HttpServlet {
 
     private static final String UserRecord = null;
     private static String cadastrar = "/NovoUsuario.jsp";
-    private static String alterar = "/EditarConta.jsp";
-    private static String deletar = "/RemoverConta.jsp";
-    private static String listar = "/ListarUsuarios.jsp";
+    private static String alterar = "/livrosEmMovimento.jsp";
+    private static String deletar = "/index.jsp";
     private UsuarioDAO dao;
 
     public ControlaUsuario() {
@@ -79,7 +78,7 @@ public class ControlaUsuario extends HttpServlet {
                     break;
                     
                 default :
-                    redirect = listar;
+                    redirect = deletar;
             }
             
             /*	request Dispatcher
