@@ -4,6 +4,7 @@ import DAO.LivroDAO;
 import Model.Livro;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -42,6 +43,23 @@ public class BookControl extends HttpServlet {
                 livro.setGenero(request.getParameter("genero"));
                 livro.setCapa(request.getParameter("capa"));
                 dao.inserirLivro(livro);
+
+                out.println("<div class=\"col-md-4\">");
+                out.println("<table>");
+                out.println("<tr>");
+                out.println("<td style=\"padding-right: 20px; padding-left: 50px;\">");
+                out.println("<img src=" + livro.getCapa() + "width=\"200\" height=\"300\">");
+                out.println("<a class=\"btn btn-transparent\" href=\"#edit\"  class=\"btn-block page-scroll\" style=\"width:95px; padding: 15px;\">Editar</a>"
+                        + "<a class=\"btn btn-light\" href=\"portifolio\" style=\"width:105px; padding: 15px;\">Remover</a>");
+                out.println("</td>");
+                out.println("<td class=\"media-body\">");
+                out.println("<h3>" + livro.getTitulo() + "</h3>");
+                out.println("<p>" + livro.getColecao() + "</p>");
+                out.println("<p>" + livro.getAutor() + "</p>");
+                out.println("</td>");
+                out.println("</tr>");
+                out.println("</table>");
+                out.println("</div>");
                 break;
 
             case "delLivro":

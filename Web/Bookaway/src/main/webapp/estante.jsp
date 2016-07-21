@@ -198,7 +198,7 @@
                         <form method="post" action="BookControl" enctype="multipart/form-data">
                             <br>
                             <h6>Título</h6>
-                            <input type="text" required="required" class="form-control" name="Nome" placeholder="Nome">
+                            <input type="text" required="required" class="form-control" name="titulo" placeholder="Título">
 
                             <h6>Coleção</h6>
                             <input type="text" class="form-control" name="Colecao" placeholder="Colecao">
@@ -210,7 +210,7 @@
                             <input type="text" required="required" class="form-control" name="Genero" placeholder="Gênero">
 
                             <h6>Capa</h6>
-                            <input type="file" name="photo" required="required" name="Capa"><br>
+                            <input type="file" required="required" name="Capa"><br>
 
                             <input type="submit"  value="Adicionar Livro" class="btn-block page-scroll" style='background: #808080;'>
                         </form>
