@@ -6,8 +6,14 @@
                 <input type="search" placeholder="Procure um livro!">
             </label>
             <div class="spacer" style="width: 300px; height: 39px;"></div>
-            <ion-item class="item-thumbnail-left  " id="bookAway-list-item9" ui-sref="menu.visualizaLivro">
-                <h2>Item</h2>
+            <ion-item collection-repeat="livro in livrosProximos" class="item item-thumbnail-left" id="bookAway-list-item9" ui-sref="menu.visualizaLivro">
+                <img
+                    item-width="33%"
+                    item-height="200px"
+                    ng-src="{{livro.photo}}">
+                <h2>{{livro.titulo}}</h2>
+                <h4>{{livro.colecao}}</h4>
+                <h3>{{livro.autor}}</h3>
             </ion-item>
         </form>
     </ion-content>
