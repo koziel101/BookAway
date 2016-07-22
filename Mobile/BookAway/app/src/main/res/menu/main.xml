@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/perquisa"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_magnify"
+        android:orderInCategory="100"
         android:title="Pesquisa"
         app:showAsAction="always" />
 </menu>

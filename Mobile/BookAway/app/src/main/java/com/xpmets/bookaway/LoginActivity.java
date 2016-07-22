@@ -63,11 +63,11 @@ public class LoginActivity extends Fragment implements LoaderManager.LoaderCallb
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
     };
+    CallbackManager callbackManager;
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
     private UserLoginTask mAuthTask = null;
-
     // UI references.
     private View mView;
     private AutoCompleteTextView mEmailView;
@@ -75,7 +75,6 @@ public class LoginActivity extends Fragment implements LoaderManager.LoaderCallb
     private View mProgressView;
     private View mLoginFormView;
     private Context context;
-    CallbackManager callbackManager;
 
     @Nullable
     @Override
@@ -330,6 +329,10 @@ public class LoginActivity extends Fragment implements LoaderManager.LoaderCallb
         mEmailView.setAdapter(adapter);
     }
 
+    private void cadastro() {
+        Intent it = new Intent(context, CadastroActivity.class);
+        startActivity(it);
+    }
 
     private interface ProfileQuery {
         String[] PROJECTION = {
@@ -396,11 +399,6 @@ public class LoginActivity extends Fragment implements LoaderManager.LoaderCallb
             mAuthTask = null;
             showProgress(false);
         }
-    }
-
-    private void cadastro() {
-        Intent it = new Intent(context, CadastroActivity.class);
-        startActivity(it);
     }
 }
 
