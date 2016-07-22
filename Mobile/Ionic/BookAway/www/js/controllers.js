@@ -1,5 +1,5 @@
 angular.module('app.controllers', [])
-  
+
 .controller('bookAwayCtrl', function($scope) {
 	$scope.livrosProximos = [
     { titulo: 'Harry Potter e as Reliquias da Morte', id: 1, photo: 'img/livros/reliquias da morte.jpg', autor: 'J.K. Rowling', colecao: 'Harry Potter Saga' },
@@ -10,7 +10,7 @@ angular.module('app.controllers', [])
     { titulo: 'The Fellowship of the Ring', id: 6, photo: 'img/livros/fotr.jpg', autor: 'J.R.R. Tolkien', colecao: 'The Lord of the Rings' }
   ];
 })
-   
+
 .controller('estanteCtrl', function($scope) {
 	$scope.livros = [
     { titulo: 'Harry Potter e as Reliquias da Morte', id: 1, photo: 'img/livros/reliquias da morte.jpg', autor: 'J.K. Rowling', colecao: 'Harry Potter Saga' },
@@ -21,32 +21,49 @@ angular.module('app.controllers', [])
     { titulo: 'The Fellowship of the Ring', id: 6, photo: 'img/livros/fotr.jpg', autor: 'J.R.R. Tolkien', colecao: 'The Lord of the Rings' }
   ];
 })
-      
+
 .controller('loginCtrl', function($scope) {
 
 })
-   
+
 .controller('signupCtrl', function($scope) {
 
 })
-   
+
 .controller('meuPerfilCtrl', function($scope) {
 
 })
-   
+
 .controller('livroCtrl', function($scope) {
 
 })
-   
+
 .controller('visualizaLivroCtrl', function($scope) {
 
 })
-   
+
 .controller('novoLivroCtrl', function($scope) {
 
 })
-   
+
 .controller('favoritosCtrl', function($scope) {
 
 })
- 
+
+module.controller('MyCtrl', function($scope, $cordovaSQLite) {
+
+  var db = $cordovaSQLite.openDB({ name: "my.db" });
+
+  // for opening a background db:
+  var db = $cordovaSQLite.openDB({ name: "my.db", bgType: 1 });
+
+  $scope.execute = function() {
+    var query = "INSERT INTO test_table (data, data_num) VALUES (?,?)";
+    $cordovaSQLite.execute(db, query, ["test", 100]).then(function(res) {
+      console.log("insertId: " + res.insertId);
+    }, function (err) {
+      console.error(err);
+    });
+  };
+
+});
