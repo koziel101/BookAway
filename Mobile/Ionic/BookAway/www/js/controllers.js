@@ -50,6 +50,10 @@ angular.module('app.controllers', [])
 
 })
 
+.controller('pesquisarCtrl', function($scope) {
+
+})
+
 module.controller('MyCtrl', function($scope, $cordovaSQLite) {
 
   var db = $cordovaSQLite.openDB({ name: "my.db" });
