@@ -43,13 +43,13 @@ angular.module('app.controllers', [])
 })
 
 .controller('novoLivroCtrl', function($scope) {
-	//document.getElementById('novoLivro-input13').addEventListener('novoLivro-button21', function() {
+	document.getElementById('novoLivro-input13').addEventListener($scope.titulo, function() {
       // Get the value of the name field.
       //var name = document.getElementById('titulo').value;
 
       // Save the name in localStorage.
       //localStorage.setItem('name', name);
-		//}
+		}
 })
 
 .controller('favoritosCtrl', function($scope) {
