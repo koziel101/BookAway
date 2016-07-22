@@ -44,20 +44,17 @@ angular.module('app.controllers', [])
 
 
 
-        .controller('novoLivroCtrl', function ($scope) {
-            $scope.doAddDialog = function () {
-                var livro = new Persistence.Entities.Playlist({title: $scope.livros.title});
-                Persistence.add(livros);
+				.controller('novoLivroCtrl', function($scope) {
+-	//document.getElementById('novoLivro-input13').addEventListener('novoLivro-button21', function() {
++				document.getElementById('novoLivro-input13').addEventListener(novoLivro-button21, function() {
+			 // Get the value of the name field.
+			 var name = document.getElementById($scope.titulo).value;
 
-                $scope.livros = '';
-                $scope.closeAddDialog();
-            };
-            getPlaylists();
-
-            $scope.$on('playlistAdded', function (event, playlist) {
-                getPlaylists();
-            });
-        })
+			 // Save the name in localStorage.
+			 localStorage.setItem('name', name);
+-					//}
++					}
+ 				})
 
         .controller('favoritosCtrl', function ($scope) {
 
