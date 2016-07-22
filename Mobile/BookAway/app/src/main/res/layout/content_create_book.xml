@@ -61,8 +61,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
 
 
         <TextView
@@ -98,8 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/tag_give_away"
             android:gravity="center"
             android:padding="5dp"

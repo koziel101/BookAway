@@ -15,9 +15,9 @@ public class UserAccountInfoActivity extends Fragment {
     private View mView;
 
     @Override
-    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.content_user_account_info,container,false);
+        View v = inflater.inflate(R.layout.content_user_account_info, container, false);
         context = getActivity().getApplicationContext();
         this.mView = v;
 
@@ -32,7 +32,7 @@ public class UserAccountInfoActivity extends Fragment {
         return v;
     }
 
-    private void editUserAccount(){
+    private void editUserAccount() {
         Intent it = new Intent(context, UserAccountEditActivity.class);
         startActivity(it);
     }
