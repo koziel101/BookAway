@@ -45,14 +45,14 @@ angular.module('app.controllers', [])
 
 
 				.controller('novoLivroCtrl', function($scope) {
--	//document.getElementById('novoLivro-input13').addEventListener('novoLivro-button21', function() {
+-	window.onload = function() {
 +				document.getElementById('novoLivro-input13').addEventListener(novoLivro-button21, function() {
 			 // Get the value of the name field.
 			 var name = document.getElementById($scope.titulo).value;
 
 			 // Save the name in localStorage.
 			 localStorage.setItem('name', name);
--					//}
+-					}
 +					}
  				})
 
