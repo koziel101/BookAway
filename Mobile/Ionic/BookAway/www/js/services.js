@@ -45,6 +45,10 @@ angular.module('app.services', [])
                 getLivros: function () {
                     return this.livros;
                 },
+                addLivro: function(livro){
+                    this.livros.push(livro);
+                    return null;
+                },
                 getLivro: function (livroID) {
                     for (i = 0; i < this.c.length; i++) {
                         if (this.livros[i].id == livroId) {

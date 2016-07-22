@@ -6,8 +6,14 @@
             <a ui-sref="menu.estante" id="favoritos-button28" style="font-weight:lighter;" class=" button button-positive  button-block button-outline icon ion-android-bookmark ">Estante</a>
         </div>
         <ion-list id="favoritos-list6" class=" ">
-            <ion-item class="item-thumbnail-left  " id="favoritos-list-item16">
-                <h2>Item</h2>
+            <ion-item collection-repeat="livro in livrosProximos" class="item item-thumbnail-left" id="favoritos-list-item16" ui-sref="menu.visualizaLivro">
+                <img
+                    item-width="33%"
+                    item-height="200px"
+                    ng-src="{{livro.photo}}">
+                <h2>{{livro.titulo}}</h2>
+                <h4>{{livro.colecao}}</h4>
+                <h3>{{livro.autor}}</h3>
             </ion-item>
         </ion-list>
     </ion-content>

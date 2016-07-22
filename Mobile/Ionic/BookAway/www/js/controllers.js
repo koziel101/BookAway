@@ -1,25 +1,11 @@
 angular.module('app.controllers', [])
 
-        .controller('bookAwayCtrl', function ($scope) {
-            $scope.livrosProximos = [
-                {titulo: 'Harry Potter e as Reliquias da Morte', id: 1, photo: 'img/livros/reliquias da morte.jpg', autor: 'J.K. Rowling', colecao: 'Harry Potter Saga'},
-                {titulo: 'A Song of Ice and Fire', id: 2, photo: 'img/livros/game of thrones.jpg', autor: 'G.R.R. Martin', colecao: 'A Song of Ice and Fire'},
-                {titulo: 'Sonho de uma noite de verão', id: 3, photo: 'img/livros/sonho noite verao.jpg', autor: 'Willian', colecao: 'Sem Coleção'},
-                {titulo: 'Eragon', id: 4, photo: 'img/livros/eragon.jpg', autor: 'Christopher Paolini', colecao: 'Eragon Saga'},
-                {titulo: 'The Hunger Games', id: 5, photo: 'img/livros/the hunger games.jpg', autor: 'Suzane Collins', colecao: 'The Hunger Games Saga'},
-                {titulo: 'The Fellowship of the Ring', id: 6, photo: 'img/livros/fotr.jpg', autor: 'J.R.R. Tolkien', colecao: 'The Lord of the Rings'}
-            ];
+        .controller('bookAwayCtrl', function ($scope, ListaLivroService) {
+            $scope.livrosProximos = ListaLivroService.getLivros();
         })
 
-        .controller('estanteCtrl', function ($scope) {
-            $scope.livros = [
-                {titulo: 'Harry Potter e as Reliquias da Morte', id: 1, photo: 'img/livros/reliquias da morte.jpg', autor: 'J.K. Rowling', colecao: 'Harry Potter Saga'},
-                {titulo: 'A Song of Ice and Fire', id: 2, photo: 'img/livros/game of thrones.jpg', autor: 'G.R.R. Martin', colecao: 'A Song of Ice and Fire'},
-                {titulo: 'Sonho de uma noite de verão', id: 3, photo: 'img/livros/sonho noite verao.jpg', autor: 'Willian', colecao: 'Sem Coleção'},
-                {titulo: 'Eragon', id: 4, photo: 'img/livros/eragon.jpg', autor: 'Christopher Paolini', colecao: 'Eragon Saga'},
-                {titulo: 'The Hunger Games', id: 5, photo: 'img/livros/the hunger games.jpg', autor: 'Suzane Collins', colecao: 'The Hunger Games Saga'},
-                {titulo: 'The Fellowship of the Ring', id: 6, photo: 'img/livros/fotr.jpg', autor: 'J.R.R. Tolkien', colecao: 'The Lord of the Rings'}
-            ];
+        .controller('estanteCtrl', function ($scope, ListaLivroService) {
+            $scope.livros = ListaLivroService.getLivros();
         })
 
         .controller('loginCtrl', function ($scope) {
@@ -44,11 +30,15 @@ angular.module('app.controllers', [])
 
 
 
-				.controller('novoLivroCtrl', function($scope) {
--	window.onload = function() {
-+				document.getElementById('novoLivro-input13').addEventListener(novoLivro-button21, function() {
+		.controller('novoLivroCtrl', function($scope, ListaLivroService) {
+            $scope.novo{};
+            $scope.getNovoLivro = function(livro){
+                //add livro aqui
+            }
+-	        window.onload = function() {
++			document.getElementById('novoLivro-input13').addEventListener(novoLivro-button21, function() {
 			 // Get the value of the name field.
-			 var name = document.getElementById($scope.titulo).value;
+			var name = document.getElementById($scope.titulo).value;
 
 			 // Save the name in localStorage.
 			 localStorage.setItem('name', name);
@@ -56,8 +46,8 @@ angular.module('app.controllers', [])
 +					}
  				})
 
-        .controller('favoritosCtrl', function ($scope) {
-
+        .controller('favoritosCtrl', function ($scope, ListaLivroService) {
+            $scope.favoritos = ListaLivroService.getLivros();
         })
 
         .controller('pesquisarCtrl', function ($scope, ListaLivroService) {
