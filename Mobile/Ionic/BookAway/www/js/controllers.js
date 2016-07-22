@@ -42,8 +42,21 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('novoLivroCtrl', function($scope) {
 
+
+.controller('novoLivroCtrl', function($scope) {
+	$scope.doAddDialog = function() {
+	    var livro = new Persistence.Entities.Playlist({title: $scope.livros.title});
+	    Persistence.add(livros);
+
+	    $scope.livros = '';
+	    $scope.closeAddDialog();
+	  };
+		getPlaylists();
+
+  $scope.$on('playlistAdded', function(event, playlist) {
+    getPlaylists();
+  });
 })
 
 .controller('favoritosCtrl', function($scope) {
@@ -51,23 +64,5 @@ angular.module('app.controllers', [])
 })
 
 .controller('pesquisarCtrl', function($scope) {
-
-})
-
-module.controller('MyCtrl', function($scope, $cordovaSQLite) {
-
-  var db = $cordovaSQLite.openDB({ name: "my.db" });
-
-  // for opening a background db:
-  var db = $cordovaSQLite.openDB({ name: "my.db", bgType: 1 });
-
-  $scope.execute = function() {
-    var query = "INSERT INTO test_table (data, data_num) VALUES (?,?)";
-    $cordovaSQLite.execute(db, query, ["test", 100]).then(function(res) {
-      console.log("insertId: " + res.insertId);
-    }, function (err) {
-      console.error(err);
-    });
-  };
 
 });
