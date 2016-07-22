@@ -60,6 +60,23 @@ angular.module('app.controllers', [])
 
         })
 
-        .controller('pesquisarCtrl', function ($scope) {
-
+        .controller('pesquisarCtrl', function ($scope, ListaLivroService) {
+			$scope.todosLivros = ListaLivroService.getLivros();
+			$scope.livroProcurado = $scope.data.search-item;
+			$scope.livrosEncontrados[];
+			for(int i = 0; i < ListaLivroService.livros.length; i++){
+				if($livros[i].getAttribute("titulo")== $scope.livroProcurado){
+					$scope.livroEncontrado = ListaLivroService.getLivro(i);
+					$scope.livrosEncontrados.push($scope.livroEncontrado);
+				}else if($livros[i].getAttribute("autor")== $scope.livroProcurado){
+					$scope.livroEncontrado = ListaLivroService.getLivro(i);
+					$scope.livrosEncontrados.push($scope.livroEncontrado);
+				}else if($livros[i].getAttribute("colecao")== $scope.livroProcurado){
+					$scope.livroEncontrado = ListaLivroService.getLivro(i);
+					$scope.livrosEncontrados.push($scope.livroEncontrado);
+				}else{
+					alert("Nenhum resultado encontrado.");
+				}
+			}
+			return livrosEncontrados;
         });

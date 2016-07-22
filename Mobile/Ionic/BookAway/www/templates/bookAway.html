@@ -3,7 +3,7 @@
         <form id="bookAway-form6" class="list ">
             <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
-                <input type="search" placeholder="Procure um livro!">
+                <input ng-model="data.search-item" type="search" placeholder="Procure um livro!"><button ng-click="pesquisaControl" class="button button-stable" >Busque</button>
             </label>
             <div class="spacer" style="width: 300px; height: 39px;"></div>
             <ion-item collection-repeat="livro in livrosProximos" class="item item-thumbnail-left" id="bookAway-list-item9" ui-sref="menu.visualizaLivro">
