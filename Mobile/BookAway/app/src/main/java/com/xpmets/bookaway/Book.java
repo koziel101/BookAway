@@ -2,10 +2,6 @@ package com.xpmets.bookaway;
 
 import android.widget.ImageView;
 
-/**
- * Created by Hiago on 22/07/2016.
- */
-
 public class Book {
     private String titulo, autor;
     private boolean vender, trocar, doar, emprestar;

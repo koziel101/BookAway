@@ -1,5 +1,6 @@
 package com.xpmets.bookaway;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,26 +8,34 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.List;
+import java.util.ArrayList;
 
-/**
- * Created by Hiago on 22/07/2016.
- */
+import static android.support.v7.widget.RecyclerView.ViewHolder;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> {
 
-    private List<Book> boooksList;
+    ArrayList<Book> boooksList;
+    Context context;
+    private View mView;
 
-    public BookAdapter(List<Book> booksList) {
-        this.boooksList = boooksList;
+    public class MyViewHolder extends ViewHolder {
+        public TextView titulo, autor;
+        public boolean vender, trocar, doar, emprestar;
+        public ImageView capa;
+
+        public MyViewHolder(View view) {
+            super(view);
+            titulo = (TextView) view.findViewById(R.id.title);
+            autor = (TextView) view.findViewById(R.id.autor);
+            capa = (ImageView) view.findViewById(R.id.capa);
+        }
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.content_book, parent, false);
-
-        return new MyViewHolder(itemView);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.book, parent, false);
+        MyViewHolder x = new MyViewHolder(v);
+        return x;
     }
 
     @Override
@@ -39,19 +48,6 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
     @Override
     public int getItemCount() {
         return boooksList.size();
-    }
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView titulo, autor;
-        public boolean vender, trocar, doar, emprestar;
-        public ImageView capa;
-
-        public MyViewHolder(View view) {
-            super(view);
-            titulo = (TextView) view.findViewById(R.id.title);
-            autor = (TextView) view.findViewById(R.id.autor);
-            capa = (ImageView) view.findViewById(R.id.capa);
-        }
     }
 }
 
