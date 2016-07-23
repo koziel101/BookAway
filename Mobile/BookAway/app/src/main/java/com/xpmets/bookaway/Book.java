@@ -10,14 +10,14 @@ public class Book {
     public Book() {
     }
 
-    public Book(String titulo, String autor, boolean vender, boolean trocar, boolean doar, boolean emprestar) {
+    public Book(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
-        this.vender = vender;
+        /*this.vender = vender;
         this.trocar = trocar;
         this.doar = doar;
         this.emprestar = emprestar;
-//        this.capa = capa;
+//        this.capa = capa;*/
     }
 
     public String getTitulo() {

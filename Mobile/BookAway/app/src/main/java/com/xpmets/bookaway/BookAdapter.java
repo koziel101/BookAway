@@ -5,30 +5,32 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import static android.support.v7.widget.RecyclerView.ViewHolder;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> {
 
-    ArrayList<Book> boooksList;
+    List<Book> booksList;
     Context context;
     private View mView;
 
     public class MyViewHolder extends ViewHolder {
         public TextView titulo, autor;
         public boolean vender, trocar, doar, emprestar;
-        public ImageView capa;
 
         public MyViewHolder(View view) {
             super(view);
-            titulo = (TextView) view.findViewById(R.id.title);
-            autor = (TextView) view.findViewById(R.id.autor);
-            capa = (ImageView) view.findViewById(R.id.capa);
+            mView = view;
+            titulo = (TextView) mView.findViewById(R.id.title);
+            autor = (TextView) mView.findViewById(R.id.autor);
         }
+    }
+
+    public BookAdapter (List<Book> livros){
+        this.booksList = livros;
     }
 
     @Override
@@ -40,14 +42,14 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Book book = boooksList.get(position);
+        Book book = booksList.get(position);
         holder.titulo.setText(book.getTitulo());
         holder.autor.setText(book.getAutor());
     }
 
     @Override
     public int getItemCount() {
-        return boooksList.size();
+        return booksList.size();
     }
 }
 
