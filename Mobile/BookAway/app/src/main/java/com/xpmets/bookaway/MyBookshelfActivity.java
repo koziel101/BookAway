@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -52,16 +53,16 @@ public class MyBookshelfActivity extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) getView().findViewById(R.id.toolbar);
+        ((ActionBarActivity)getActivity()).setSupportActionBar(toolbar);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_view);
 
         mAdapter = new BookAdapter(bookList);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
@@ -69,7 +70,7 @@ public class MyBookshelfActivity extends Fragment {
             @Override
             public void onClick(View view, int position) {
                 Book book = bookList.get(position);
-                Toast.makeText(getApplicationContext(), book.getTitulo() + " is selected!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), book.getTitulo() + " is selected!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
