@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -55,7 +56,7 @@ public class MyBookshelfActivity extends Fragment {
         Toolbar toolbar = (Toolbar) mView.findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_view);
 
         mAdapter = new BookAdapter(bookList);
         recyclerView.setHasFixedSize(true);
@@ -69,7 +70,7 @@ public class MyBookshelfActivity extends Fragment {
             @Override
             public void onClick(View view, int position) {
                 Book book = bookList.get(position);
-                Toast.makeText(getApplicationContext(), book.getTitulo() + " is selected!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), book.getTitulo() + " is selected!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
